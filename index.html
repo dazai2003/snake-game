@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Snake Game by VW</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Main Menu -->
+        <div id="mainMenu" class="menu">
+            <h1>Snake Game</h1>
+            <button id="playBtn">Play Game</button>
+            <button id="highScoresBtn">High Scores</button>
+            <div class="difficulty">
+                <h3>Select Difficulty:</h3>
+                <select id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="copyright">
+                <button id="copyrightBtn" class="copyright-btn">© Vihanga Wimalaweera</button>
+            </div>
+        </div>
+
+        <!-- Game Area -->
+        <div id="gameArea" class="hidden">
+            <div class="game-header">
+                <div class="score">Score: <span id="scoreValue">0</span></div>
+                <div class="high-score">High Score: <span id="highScoreValue">0</span></div>
+                <div class="level">Level: <span id="levelValue">1</span></div>
+            </div>
+            <canvas id="gameCanvas"></canvas>
+            <div class="controls">
+                <button id="pauseBtn">Pause</button>
+                <button id="menuBtn">Main Menu</button>
+            </div>
+        </div>
+
+        <!-- High Scores Screen -->
+        <div id="highScoresScreen" class="menu hidden">
+            <h2>High Scores</h2>
+            <div id="highScoresList"></div>
+            <button id="backToMenuBtn">Back to Menu</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="gameOverScreen" class="menu hidden">
+            <h2>Game Over!</h2>
+            <div class="final-score">Final Score: <span id="finalScore">0</span></div>
+            <button id="playAgainBtn">Play Again</button>
+            <button id="gameOverMenuBtn">Main Menu</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html> 
